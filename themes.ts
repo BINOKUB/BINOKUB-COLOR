@@ -1,0 +1,205 @@
+
+import type { ColorTheme, ThemeName } from './types';
+
+const defaultTheme: ColorTheme = {
+  nameKey: 'defaultTheme',
+  tiles: {
+    1: 'bg-red-600 text-white',
+    2: 'bg-orange-500 text-white',
+    3: 'bg-yellow-500 text-slate-900',
+    4: 'bg-lime-500 text-slate-900',
+    5: 'bg-green-500 text-white',
+    6: 'bg-teal-500 text-white',
+    7: 'bg-cyan-500 text-slate-900',
+    8: 'bg-blue-600 text-white',
+    9: 'bg-violet-600 text-white',
+  },
+  board: {
+    background: {
+      1: 'bg-red-900/40',
+      2: 'bg-orange-900/40',
+      3: 'bg-yellow-900/40',
+      4: 'bg-lime-900/40',
+      5: 'bg-green-900/40',
+      6: 'bg-teal-900/40',
+      7: 'bg-cyan-900/40',
+      8: 'bg-blue-900/40',
+      9: 'bg-violet-900/40',
+    },
+    border: {
+      1: 'border-red-700',
+      2: 'border-orange-700',
+      3: 'border-yellow-700',
+      4: 'border-lime-700',
+      5: 'border-green-700',
+      6: 'border-teal-700',
+      7: 'border-cyan-700',
+      8: 'border-blue-700',
+      9: 'border-violet-700',
+    },
+  },
+};
+
+const neonTheme: ColorTheme = {
+  nameKey: 'neonTheme',
+  tiles: {
+    1: 'bg-fuchsia-500 text-white',
+    2: 'bg-rose-500 text-white',
+    3: 'bg-amber-400 text-slate-900',
+    4: 'bg-lime-400 text-slate-900',
+    5: 'bg-emerald-400 text-slate-900',
+    6: 'bg-cyan-400 text-slate-900',
+    7: 'bg-sky-400 text-slate-900',
+    8: 'bg-indigo-500 text-white',
+    9: 'bg-purple-500 text-white',
+  },
+  board: {
+    background: {
+        1: 'bg-fuchsia-900/50',
+        2: 'bg-rose-900/50',
+        3: 'bg-amber-900/50',
+        4: 'bg-lime-900/50',
+        5: 'bg-emerald-900/50',
+        6: 'bg-cyan-900/50',
+        7: 'bg-sky-900/50',
+        8: 'bg-indigo-900/50',
+        9: 'bg-purple-900/50',
+    },
+    border: {
+        1: 'border-fuchsia-700',
+        2: 'border-rose-700',
+        3: 'border-amber-700',
+        4: 'border-lime-700',
+        5: 'border-emerald-700',
+        6: 'border-cyan-700',
+        7: 'border-sky-700',
+        8: 'border-indigo-700',
+        9: 'border-purple-700',
+    },
+  },
+};
+
+const pastelTheme: ColorTheme = {
+    nameKey: 'pastelTheme',
+    tiles: {
+      1: 'bg-red-300 text-red-900',
+      2: 'bg-orange-300 text-orange-900',
+      3: 'bg-yellow-300 text-yellow-900',
+      4: 'bg-lime-300 text-lime-900',
+      5: 'bg-green-300 text-green-900',
+      6: 'bg-teal-300 text-teal-900',
+      7: 'bg-cyan-300 text-cyan-900',
+      8: 'bg-blue-300 text-blue-900',
+      9: 'bg-violet-300 text-violet-900',
+    },
+    board: {
+      background: {
+        1: 'bg-red-900/20',
+        2: 'bg-orange-900/20',
+        3: 'bg-yellow-900/20',
+        4: 'bg-lime-900/20',
+        5: 'bg-green-900/20',
+        6: 'bg-teal-900/20',
+        7: 'bg-cyan-900/20',
+        8: 'bg-blue-900/20',
+        9: 'bg-violet-900/20',
+      },
+      border: {
+        1: 'border-red-400/50',
+        2: 'border-orange-400/50',
+        3: 'border-yellow-400/50',
+        4: 'border-lime-400/50',
+        5: 'border-green-400/50',
+        6: 'border-teal-400/50',
+        7: 'border-cyan-400/50',
+        8: 'border-blue-400/50',
+        9: 'border-violet-400/50',
+      },
+    },
+  };
+
+  const monochromeTheme: ColorTheme = {
+    nameKey: 'monochromeTheme',
+    tiles: {
+      1: 'bg-slate-100 text-slate-900',
+      2: 'bg-slate-200 text-slate-900',
+      3: 'bg-slate-300 text-slate-900',
+      4: 'bg-slate-400 text-slate-900',
+      5: 'bg-slate-500 text-white',
+      6: 'bg-slate-600 text-white',
+      7: 'bg-slate-700 text-white',
+      8: 'bg-slate-800 text-white',
+      9: 'bg-slate-900 border border-slate-500 text-white',
+    },
+    board: {
+      background: {
+        1: 'bg-slate-800/10',
+        2: 'bg-slate-800/20',
+        3: 'bg-slate-800/30',
+        4: 'bg-slate-800/40',
+        5: 'bg-slate-800/50',
+        6: 'bg-slate-800/60',
+        7: 'bg-slate-800/70',
+        8: 'bg-slate-800/80',
+        9: 'bg-slate-800/90',
+      },
+      border: {
+        1: 'border-slate-700/50',
+        2: 'border-slate-700/60',
+        3: 'border-slate-700/70',
+        4: 'border-slate-600/80',
+        5: 'border-slate-600/90',
+        6: 'border-slate-500',
+        7: 'border-slate-400',
+        8: 'border-slate-300',
+        9: 'border-slate-200',
+      },
+    },
+  };
+
+const translucentTheme: ColorTheme = {
+  nameKey: 'translucentTheme',
+  tiles: {
+    1: 'bg-rose-500/75 text-white',
+    2: 'bg-amber-500/75 text-slate-900',
+    3: 'bg-lime-500/75 text-slate-900',
+    4: 'bg-emerald-500/75 text-white',
+    5: 'bg-teal-500/75 text-white',
+    6: 'bg-cyan-500/75 text-slate-900',
+    7: 'bg-sky-500/75 text-white',
+    8: 'bg-indigo-500/75 text-white',
+    9: 'bg-violet-500/75 text-white',
+  },
+  board: {
+    background: {
+      1: 'bg-rose-900/30',
+      2: 'bg-amber-900/30',
+      3: 'bg-lime-900/30',
+      4: 'bg-emerald-900/30',
+      5: 'bg-teal-900/30',
+      6: 'bg-cyan-900/30',
+      7: 'bg-sky-900/30',
+      8: 'bg-indigo-900/30',
+      9: 'bg-violet-900/30',
+    },
+    border: {
+      1: 'border-rose-700/50',
+      2: 'border-amber-700/50',
+      3: 'border-lime-700/50',
+      4: 'border-emerald-700/50',
+      5: 'border-teal-700/50',
+      6: 'border-cyan-700/50',
+      7: 'border-sky-700/50',
+      8: 'border-indigo-700/50',
+      9: 'border-violet-700/50',
+    },
+  },
+};
+
+export const themes: Record<ThemeName, ColorTheme> = {
+  default: defaultTheme,
+  neon: neonTheme,
+  pastel: pastelTheme,
+  monochrome: monochromeTheme,
+  translucent: translucentTheme,
+};
