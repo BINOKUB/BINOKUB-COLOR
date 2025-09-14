@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { TileData, ColorTheme, TFunction } from '../types';
 import { Tile } from './Tile';
@@ -13,7 +12,7 @@ interface TilePaletteProps {
 export const TilePalette: React.FC<TilePaletteProps> = ({ tiles, onDragStart, theme, t }) => {
   return (
     <div className="p-4 bg-slate-800 rounded-lg shadow-lg">
-      <h2 className="text-xl font-bold text-center mb-4 text-slate-300">{t('numberPalette')}</h2>
+      <h2 className="text-xl font-bold text-center mb-4 text-slate-300">{t('suitePalette')}</h2>
       <div 
         className="h-96 lg:h-[34rem] overflow-y-auto pr-2 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3 gap-2"
         onDrop={(e) => {

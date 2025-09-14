@@ -1,4 +1,3 @@
-
 import type { TranslationKey as TK } from './lib/translations';
 
 export interface TileData {
@@ -31,14 +30,3 @@ export interface ColorTheme {
 export type ThemeName = 'default' | 'neon' | 'pastel' | 'monochrome' | 'translucent';
 
 export type TFunction = (key: TranslationKey) => string;
-
-export type GameStatus = 'won' | 'abandoned';
-
-export interface GameRecord {
-  id: number;
-  date: string;
-  difficulty: Difficulty;
-  status: GameStatus;
-  time: number; // in seconds
-  hintsUsed: number;
-}

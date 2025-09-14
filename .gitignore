@@ -7,16 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dépendances du projet React (situées dans le sous-dossier)
-src-binokub-color/node_modules
-
-# Dossier de production qui sera généré par Render sur le serveur
-/binokub-color
-
-# Fichiers d'environnement et logs
-.env
-npm-debug.log
-
 node_modules
 dist
 dist-ssr

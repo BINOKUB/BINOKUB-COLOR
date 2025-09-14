@@ -7,12 +7,11 @@ interface TileProps {
   isPlaced?: boolean;
   status?: TileStatus;
   isHint?: boolean;
-  isWinning?: boolean;
   style?: React.CSSProperties;
   onDragStart?: (e: React.DragEvent<HTMLDivElement>) => void;
 }
 
-export const Tile: React.FC<TileProps> = ({ tile, theme, isPlaced = false, status = 'empty', isHint = false, isWinning = false, style, onDragStart }) => {
+export const Tile: React.FC<TileProps> = ({ tile, theme, isPlaced = false, status = 'empty', isHint = false, style, onDragStart }) => {
   const colorClasses = theme.tiles[tile.base] || 'bg-gray-500 text-white';
   const [isShaking, setIsShaking] = useState(false);
   // FIX: Explicitly initialize useRef with undefined to satisfy a TypeScript error expecting an argument.
@@ -53,7 +52,6 @@ export const Tile: React.FC<TileProps> = ({ tile, theme, isPlaced = false, statu
   
   const animationClass = isPlaced ? 'animate-drop-in' : '';
   const shakeClass = isShaking ? 'animate-shake' : '';
-  const winClass = isWinning ? 'animate-win-pulse' : '';
 
   return (
     <div
@@ -64,7 +62,7 @@ export const Tile: React.FC<TileProps> = ({ tile, theme, isPlaced = false, statu
       ${colorClasses} ${borderClass} 
       ${isDraggable ? 'cursor-grab active:cursor-grabbing' : 'cursor-default'} 
       ${status === 'correct' ? 'opacity-100' : 'opacity-95 hover:opacity-100 hover:scale-105'}
-      ${animationClass} ${shakeClass} ${winClass}`}
+      ${animationClass} ${shakeClass}`}
     >
       {tile.value}
     </div>

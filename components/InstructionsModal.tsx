@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { TFunction } from '../types';
 
@@ -41,6 +40,11 @@ export const InstructionsModal: React.FC<InstructionsModalProps> = ({ isOpen, on
           <div>
             <h3 className="text-xl font-semibold text-yellow-400 mb-1">{t('goalTitle')}</h3>
             <p className="text-base">{t('goalExplanation')}</p>
+          </div>
+
+          <div className="pt-2 border-t border-slate-700">
+            <h3 className="text-xl font-semibold text-yellow-400 mb-1">{t('finalChallengeTitle')}</h3>
+            <p className="text-base">{t('finalChallengeDesc')}</p>
           </div>
         </div>
 
